@@ -1,6 +1,8 @@
 package com.example.personne_serialisation;
 
-public class Personne {
+import java.io.Serializable;
+
+public class Personne implements Serializable {
 
     String nom;
     String prenom;

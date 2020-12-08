@@ -6,13 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/editTextTextPersonNom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/editTextTextPersonPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Prenom
+"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonNom"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonNom"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonNom" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Age"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonPrenom"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonPrenom"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonPrenom" />
+
+    <Button
+        android:id="@+id/buttonCharger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Charger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEffacer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="Charger"/>
+
+    <Button
+        android:id="@+id/buttonEffacer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Effacer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonCharger"
+        android:onClick="Effacer"/>
+
+    <Button
+        android:id="@+id/buttonEnregistrer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Enregistrer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonAge"
+        android:onClick="Enregistrer"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
